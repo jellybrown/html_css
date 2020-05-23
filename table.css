@@ -1,0 +1,30 @@
+.hide {
+  display: none;
+}
+
+.content {
+  width: 980px;
+  padding: 50px;
+}
+
+.tb_type1 thead th {
+  height: 34px;
+  font-size: 14px;
+  color: #333;
+  background: #f8f8f8;
+}
+.tb_type1 th,
+.tb_type1 td {
+  border: 1px solid #e2e2e2;
+}
+
+.tb_type1 td {
+  padding: 10px 5px;
+  font-size: 13px;
+  color: #666;
+}
+
+.tb_type1 td.center {
+  /* 가운데 정렬용*/
+  text-align: center;
+}
