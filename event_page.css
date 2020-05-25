@@ -1,10 +1,14 @@
-.event_list {
+body {
+  padding: 50px;
+}
+main {
   width: 1196px;
 }
 
 .event_list ul {
   display: flex;
-  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-wrap: wrap; /* 초과시 밑으로 떨어지게 */
 }
 
 .event_list li {
@@ -41,7 +45,7 @@
   padding: 29px 10px 0;
 }
 .info p {
-  text-decoration: none;
+  text-align: center;
 }
 .event_list li a .info strong {
   /* block만 필수아님 */
@@ -78,4 +82,86 @@
   text-align: center;
   line-height: 60px;
   border-radius: 100%;
+}
+.paging {
+  padding: 28px 0 60px;
+}
+
+.paging ul {
+  display: flex;
+  justify-content: center;
+}
+
+.paging a {
+  display: block;
+  width: 42px;
+  height: 42px;
+  text-align: center;
+  line-height: 42px;
+  font-size: 15px;
+  color: #555;
+}
+.paging a:hover,
+.paging a.on {
+  background: #ed1846;
+  color: #fff;
+}
+
+.paging .first a:hover,
+.paging .prev a:hover,
+.paging .next a:hover,
+.paging .last a:hover {
+  background: none;
+}
+
+.paging li {
+  margin: 0 7px;
+}
+
+.paging .first {
+  margin: 0 16px 0 0;
+  background: url(images/prev-first.png) no-repeat center;
+}
+
+.paging .prev {
+  padding: 0 6px 0 0;
+  background: url(images/paging-prev.png) no-repeat center;
+}
+.paging .next {
+  padding: 0 0 0 6px;
+  background: url(images/paging-next.png) no-repeat center;
+}
+
+.paging .last {
+  margin: 0 0 0 16px;
+  background: url(images/next-last.png) no-repeat center;
+}
+
+.search {
+  padding: 20px 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  font-size: 0;
+}
+
+.search * {
+  margin: 0 5px;
+  height: 53px;
+  border: 1px solid #ccc;
+}
+
+.search select {
+  width: 148px;
+}
+
+.search input {
+  width: 258px;
+}
+
+.search button {
+  width: 150px;
+  border: none;
+  background: #ed1846;
+  color: #fff;
 }
