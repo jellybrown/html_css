@@ -1,0 +1,107 @@
+.login {
+  width: 410px;
+  position: absolute; /* 정렬을 위해서 */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /* 몸덩이의 절반씩 이동 */
+  text-align: center;
+}
+
+.login h2 {
+  padding: 0 0 20px;
+  font-size: 32px;
+  color: #111;
+  border-bottom: 2px solid #111;
+  text-align: center;
+  line-height: 1; /* 줄간격 초기화 */
+}
+.login > ul {
+  padding: 40px 0 33px;
+}
+
+.login > ul li {
+  padding: 0 0 12px;
+  text-align: left;
+}
+
+.login > ul li input {
+  width: 100%;
+  height: 46px;
+  box-sizing: border-box;
+  text-indent: 16px; /* holder일때와, 입력시 둘다 앞쪽 띄움 */
+}
+
+.login > ul li input::-webkit-input-placeholder {
+  font-size: 16px;
+  color: #9fa19f;
+}
+
+.login > ul li input[type="checkbox"] {
+  position: absolute;
+  left: -3000%;
+}
+.login > ul li input[type="checkbox"] + label {
+  height: 36px;
+  line-height: 36px;
+}
+
+.login li input[type="checkbox"] + label:before {
+  content: "";
+  /* 인라인요소이기 때문에, 크기가 안먹힘 => inline-block으로  */
+  display: inline-block;
+  margin: 0 10px 0 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #666;
+  background: #fff;
+  vertical-align: -4px;
+}
+.login li input[type="checkbox"]:checked + label:before {
+  background: url(images/ico_check_on.png) no-repeat center #333;
+  border-color: #333;
+}
+
+.login button {
+  width: 100%;
+  height: 56px;
+  background: #ed1c24;
+  font-size: 18px;
+  color: #fff;
+}
+
+.login div {
+  padding: 0 0 45px;
+}
+
+.login div ul {
+  display: flex;
+  justify-content: center;
+}
+
+.login div ul li {
+  padding: 0 18px; /* 빈공간 클릭못하게 하려고 li에 패딩 */
+  position: relative;
+}
+.login div ul li ~ li:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 14px;
+  width: 1px;
+  background: #111;
+  transform: rotate(25deg);
+  top: 4px;
+}
+
+.login div ul li a {
+  font-size: 14px;
+  color: #111;
+}
+
+.login > a {
+  font-size: 14px;
+  color: #666;
+  position: relative;
+  border-bottom: 1px solid #666;
+}
